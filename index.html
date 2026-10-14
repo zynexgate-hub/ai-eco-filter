@@ -1,59 +1,12 @@
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
- <title>ECO AI | Smart Learning Platform</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f9f5;
-      color: #173b30;
-      text-align: center;
-    }
-    header {
-      background: #087f5b;
-      color: white;
-      padding: 40px 20px;
-    }
-    main { padding: 50px 20px; }
-    .card {
-      background: white;
-      max-width: 600px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px #0001;
-    }
-    button {
-      background: #087f5b;
-      color: white;
-      border: 0;
-      border-radius: 8px;
-      padding: 14px 24px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <header>
-  <h1>🌱 ECO AI</h1>
-<p>Smart Learning & Attendance Platform</p>
-  </header>
-  <main>
-    <div class="card">
-      <h2>Selamat Datang!</h2>
-      <p>
-        Belajar lebih mudah dengan
-        teknologi kecerdasan buatan.
-      </p>
-      <button onclick="alert('AI segera hadir!')">
-        Mulai Belajar
-      </button>
-    </div>
-  </main>
-</body>
-</html>
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#075b48"><title>ECO AI | PBL-STEM Learning</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="app"><aside class="sidebar"><a class="brand" href="#home"><span class="brandicon">✦</span><span>ECO <b>AI</b><small>LEARNING ECOSYSTEM</small></span></a><div class="sidetitle">MENU BELAJAR</div><nav id="nav"><button class="navitem active" data-page="home">⌂ <span>Beranda</span></button><button class="navitem" data-page="journey">◈ <span>Jelajah LINGO</span></button><button class="navitem" data-page="assistant">✧ <span>EcoAI Tutor</span></button><button class="navitem" data-page="library">▤ <span>Perpustakaan</span></button><button class="navitem" data-page="attendance">◷ <span>Absensi</span></button><button class="navitem" data-page="progress">▥ <span>Progres Belajar</span></button></nav><div class="sidebottom"><div class="tinylabel">MISI HARI INI</div><strong>Belajar, bukan menyalin.</strong><p>Temukan bukti. Susun argumenmu sendiri.</p></div></aside>
+<main class="main"><header class="topbar"><button id="menuToggle" class="iconbtn" aria-label="Buka menu">☰</button><span class="crumb">ECO AI <span>/</span> <b id="pageLabel">Beranda</b></span><div class="topright"><span class="pill">● Kelas X · Fase E</span><button class="profile" id="profileBtn" title="Atur nama">S</button></div></header><div class="content">
+<section id="home" class="page active"><div class="hero"><div class="heroText"><div class="eyebrow">🌿 PBL–STEM • KEARIFAN LOKAL PESISIR SIDOARJO</div><h1>Halo, <span id="welcomeName">Penjelajah Muda</span>! <span class="wave">👋</span></h1><p>Selamat datang di petualangan sainsmu. Amati lingkungan, kumpulkan bukti, dan temukan solusimu sendiri.</p><div class="herobuttons"><button class="btn white" data-goto="journey">Mulai Petualangan →</button><button class="btn ghost" data-goto="assistant">✧ Tanya EcoAI</button></div></div><div class="heroArt" aria-hidden="true"><div class="orb">🌎</div><span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span></div></div>
+<div class="stats"><div class="stat"><span>📚</span><div><b>5</b><small>Zona LINGO</small></div></div><div class="stat"><span>🧪</span><div><b>2</b><small>E-LKPD</small></div></div><div class="stat"><span>🎯</span><div><b id="doneCount">0/5</b><small>Zona dijelajahi</small></div></div><div class="stat"><span>🌱</span><div><b id="xpCount">0</b><small>XP eksplorasi</small></div></div></div>
+<div class="sectionheading"><div><span class="overline">YOUR LEARNING PATH</span><h2>Jelajahi Dunia LINGO</h2><p>Lima langkah untuk menjadi peneliti lingkungan yang kritis.</p></div><button class="textlink" data-goto="journey">Lihat semua →</button></div><div class="lingogrid" id="homeLingo"></div><div class="twocol"><article class="panel"><div class="paneltitle">🧠 Tantangan Pemantik</div><h3>Bagaimana kita tahu air menjadi lebih baik?</h3><p>Apakah perubahan warna saja cukup untuk membuktikan kualitas air meningkat?</p><button class="btn primary" id="challengeBtn">Renungkan bersama EcoAI →</button></article><article class="panel resource"><div class="paneltitle">📖 Materi Pilihan</div><h3>Modul Perubahan Lingkungan</h3><p>E-Modul Interaktif Biologi Kelas X, pendekatan PBL–STEM.</p><a class="btn outline" href="assets/docs/EModul.pdf" target="_blank" rel="noopener">Buka E-Modul ↗</a></article></div></section>
+<section id="journey" class="page"><div class="pageintro"><span class="overline">THE LEARNING JOURNEY</span><h1>Jelajah LINGO 🌱</h1><p>Setiap zona punya misi berbeda. Pelajari petunjuknya, lalu tandai setelah kamu benar-benar menjelajahinya.</p></div><div class="journeygrid" id="journeyGrid"></div></section>
+<section id="assistant" class="page"><div class="pageintro"><span class="overline">YOUR SCIENCE COMPANION</span><h1>✧ EcoAI Tutor</h1><p>Teman berpikir, bukan mesin jawaban. Tanyakan konsep, langkah penggunaan, atau minta petunjuk pengerjaan.</p></div><div class="chatlayout"><div class="chatbox"><div class="chathead"><div class="avatar">✧</div><div><strong>EcoAI · Learning Guide</strong><small>● Mode pendamping belajar aktif</small></div><span class="mode">GUIDED MODE</span></div><div id="messages" class="messages" aria-live="polite"></div><div class="suggestions" id="suggestions"></div><form id="chatForm" class="chatinput"><input id="question" autocomplete="off" maxlength="700" placeholder="Tanyakan sesuatu tentang pembelajaran..." aria-label="Pertanyaan untuk EcoAI" required><button class="btn primary" type="submit">Kirim ➤</button></form><div class="chatnote">Versi demonstrasi berbasis panduan terkurasi, belum tersambung ke model AI/API. Tidak mengirim percakapan ke server.</div></div><div class="chataside"><div class="panel"><div class="paneltitle">🛡️ Aturan EcoAI</div><p>✓ Jelaskan konsep dan navigasi</p><p>✓ Berikan langkah & contoh berbeda</p><p>✓ Bantu memeriksa proses</p><p>✕ Tidak memberi jawaban LKPD</p><p>✕ Tidak membuat data atau kesimpulan</p></div><div class="panel"><div class="paneltitle">📌 Rujukan utama</div><p>E-Modul PBL-STEM · E-LKPD 1 · E-LKPD 2</p><button class="textlink" data-goto="library">Buka referensi →</button></div></div></div></section>
+<section id="library" class="page"><div class="pageintro"><span class="overline">KNOWLEDGE LIBRARY</span><h1>Perpustakaan Digital 📚</h1><p>Dokumen asli sebagai dasar pembelajaran ECO AI. Klik untuk membuka PDF.</p></div><div class="librarygrid"><article class="doccard"><div class="docicon">📗</div><span class="overline">30 HALAMAN</span><h3>E-Modul Interaktif PBL-STEM</h3><p>Perubahan Lingkungan · Kearifan Lokal Pesisir Sidoarjo · Kelas X Fase E.</p><a class="btn primary" href="assets/docs/EModul.pdf" target="_blank" rel="noopener">Baca Modul ↗</a></article><article class="doccard"><div class="docicon">🧪</div><span class="overline">7 HALAMAN</span><h3>E-LKPD 1</h3><p>Merancang dan Melaksanakan Penyelidikan Ecorem–EcoFilter.</p><a class="btn primary" href="assets/docs/ELKPD1.pdf" target="_blank" rel="noopener">Buka LKPD 1 ↗</a></article><article class="doccard"><div class="docicon">📈</div><span class="overline">7 HALAMAN</span><h3>E-LKPD 2</h3><p>Dari Rekaman Data menjadi Bukti Ilmiah.</p><a class="btn primary" href="assets/docs/ELKPD2.pdf" target="_blank" rel="noopener">Buka LKPD 2 ↗</a></article></div><div class="notice">ℹ️ Dokumen proposal digunakan sebagai acuan desain pembelajaran internal, tidak dipublikasikan dalam website siswa.</div></section>
+<section id="attendance" class="page"><div class="pageintro"><span class="overline">LEARNING CHECK-IN</span><h1>Absensi Pembelajaran 🗓️</h1><p>Check-in untuk sesi belajar. Pada versi awal, data hanya disimpan di browser perangkat ini.</p></div><div class="attendancepanel panel"><div class="paneltitle">📋 Identitas Belajar</div><label for="studentName">Nama siswa / nama panggilan</label><input id="studentName" placeholder="Masukkan nama" maxlength="60"><label for="studentClass">Kelas</label><select id="studentClass"><option value="X-A">X-A</option><option value="X-B">X-B</option><option value="X-C">X-C</option><option value="X-D">X-D</option><option value="X-Lainnya">X-Lainnya</option></select><label for="sessionSelect">Kegiatan</label><select id="sessionSelect"><option value="Pertemuan 1 - E-LKPD 1">Pertemuan 1 · E-LKPD 1</option><option value="Pertemuan 2 - E-LKPD 2">Pertemuan 2 · E-LKPD 2</option></select><button class="btn primary" id="checkIn">✓ Check-in Pembelajaran</button><div id="attendanceResult" class="notice" role="status">Belum ada check-in di perangkat ini.</div></div><div class="notice">⚠️ Ini hanya demo lokal, bukan absensi sekolah resmi. Absensi terverifikasi membutuhkan akun siswa, database, sesi dari guru, dan kontrol anti-duplikasi.</div></section>
+<section id="progress" class="page"><div class="pageintro"><span class="overline">MY SCIENCE JOURNEY</span><h1>Progres Eksplorasi 🌟</h1><p>Rayakan proses berpikir dan eksplorasi, bukan sekadar jawaban benar.</p></div><div class="panel"><h2>Jejak Petualanganmu</h2><div class="progressbar"><div id="progressFill"></div></div><p id="progressLabel">0 dari 5 zona selesai</p><div id="progressList"></div><button class="btn outline" id="resetProgress">Ulangi Progres Lokal</button></div></section>
+</div><footer>© ECO AI · PBL–STEM Environmental Learning · Kelas X Fase E <span>Built for curious minds 🌿</span></footer></main></div><script src="script.js"></script></body></html>
