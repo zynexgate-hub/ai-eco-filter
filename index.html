@@ -4,7 +4,16 @@
 
 /* E-LKPD integrated viewer: no new browser tab */
 .lkpd-viewer[hidden]{display:none!important}.lkpd-viewer{position:fixed;inset:0;z-index:99999;background:#f5f9f7;display:flex;flex-direction:column}.lkpd-viewer-toolbar{height:62px;flex-shrink:0;display:flex;align-items:center;gap:18px;padding:9px 18px;background:#075b48;color:white;box-shadow:0 3px 14px #0002}.lkpd-back{border:1px solid #ffffff80;border-radius:10px;background:#ffffff1a;color:white;padding:10px 14px;font-weight:700;cursor:pointer}.lkpd-back:hover{background:#ffffff35}.lkpd-viewer-hint{margin-left:auto;font-size:12px;opacity:.82}#lkpdFrame{flex:1;width:100%;min-height:0;border:0;background:white}@media(max-width:600px){.lkpd-viewer-toolbar{height:auto;min-height:62px;flex-wrap:wrap;gap:8px;padding:10px}.lkpd-viewer-hint{display:none}.lkpd-viewer-toolbar strong{font-size:13px}}
-</style></head><body>
+<style>
+/* ECO AI v1.3: consistent desktop/mobile LKPD navigation */
+#lkpdViewer[hidden]{display:none!important}
+#lkpdViewer.lkpd-viewer{position:fixed!important;inset:0!important;z-index:2147483000!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+#lkpdViewer .lkpd-viewer-toolbar{position:relative!important;z-index:3!important;display:flex!important;flex:0 0 64px!important;min-height:64px!important;box-sizing:border-box!important;visibility:visible!important;opacity:1!important}
+#lkpdViewer #lkpdBack{display:inline-flex!important;align-items:center!important;justify-content:center!important;position:relative!important;z-index:4!important;visibility:visible!important;opacity:1!important;white-space:nowrap!important;min-height:42px!important}
+#lkpdViewer #lkpdFrame{display:block!important;position:relative!important;flex:1 1 auto!important;height:calc(100dvh - 64px)!important;max-height:calc(100dvh - 64px)!important;min-height:0!important}
+#lkpdViewer #lkpdBackFloating{position:fixed!important;right:20px!important;bottom:20px!important;z-index:2147483002!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;background:#075b48!important;color:white!important;border:2px solid white!important;border-radius:999px!important;padding:13px 19px!important;box-shadow:0 5px 24px #0005!important;font:700 14px Arial,sans-serif!important;cursor:pointer!important}
+@media(max-width:750px){#lkpdViewer .lkpd-viewer-toolbar{flex-basis:64px!important;flex-wrap:nowrap!important}#lkpdViewer .lkpd-viewer-hint{display:none!important}#lkpdViewer #lkpdBackFloating{right:12px!important;bottom:12px!important;padding:11px 15px!important}}
+</style></style></head><body>
 <div class="app"><aside class="sidebar"><a class="brand" href="#home"><span class="brandicon">✦</span><span>ECO <b>AI</b><small>LEARNING ECOSYSTEM</small></span></a><div class="sidetitle">MENU BELAJAR</div><nav id="nav"><button class="navitem active" data-page="home">⌂ <span>Beranda</span></button><button class="navitem" data-page="journey">◈ <span>Jelajah LINGO</span></button><button class="navitem" data-page="assistant">✧ <span>EcoAI Tutor</span></button><button class="navitem" data-page="library">▤ <span>Perpustakaan</span></button><button class="navitem" data-page="attendance">◷ <span>Absensi</span></button><button class="navitem" data-page="progress">▥ <span>Progres Belajar</span></button></nav><div class="sidebottom"><div class="tinylabel">MISI HARI INI</div><strong>Belajar, bukan menyalin.</strong><p>Temukan bukti. Susun argumenmu sendiri.</p></div></aside>
 <main class="main"><header class="topbar"><button id="menuToggle" class="iconbtn" aria-label="Buka menu">☰</button><span class="crumb">ECO AI <span>/</span> <b id="pageLabel">Beranda</b></span><div class="topright"><span class="pill">● Kelas X · Fase E</span><button class="profile" id="profileBtn" title="Atur nama">S</button></div></header><div class="content">
 <section id="home" class="page active"><div class="hero"><div class="heroText"><div class="eyebrow">🌿 PBL–STEM • KEARIFAN LOKAL PESISIR SIDOARJO</div><h1>Halo, <span id="welcomeName">Penjelajah Muda</span>! <span class="wave">👋</span></h1><p>Selamat datang di petualangan sainsmu. Amati lingkungan, kumpulkan bukti, dan temukan solusimu sendiri.</p><div class="herobuttons"><button class="btn white" data-goto="journey">Mulai Petualangan →</button><button class="btn ghost" data-goto="assistant">✧ Tanya EcoAI</button></div></div><div class="heroArt" aria-hidden="true"><div class="orb">🌎</div><span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span></div></div>
@@ -18,6 +27,7 @@
 </div><footer>© ECO AI · PBL–STEM Environmental Learning · Kelas X Fase E <span>Built for curious minds 🌿</span></footer></main></div>
 <div id="lkpdViewer" class="lkpd-viewer" hidden aria-label="Pembaca E-LKPD interaktif" role="region">
   <div class="lkpd-viewer-toolbar"><button id="lkpdBack" type="button" class="lkpd-back">← Kembali ke Perpustakaan</button><strong id="lkpdTitle">E-LKPD Interaktif</strong><span class="lkpd-viewer-hint">Jawaban tersimpan di browser ini</span></div>
+  <button type="button" id="lkpdBackFloating" aria-label="Kembali ke Perpustakaan">← Kembali ke Perpustakaan</button>
   <iframe id="lkpdFrame" title="E-LKPD Interaktif" loading="eager" allow="clipboard-read; clipboard-write"></iframe>
 </div>
 <script>
@@ -65,6 +75,7 @@ $('#resetProgress').addEventListener('click',()=>{if(confirm('Ulangi seluruh pro
  }
  document.addEventListener('click',e=>{const el=e.target.closest('[data-lkpd]');if(el){e.preventDefault();openLKPD(el.dataset.lkpd);}});
  back.addEventListener('click',closeLKPD);
+ document.getElementById('lkpdBackFloating').addEventListener('click',closeLKPD);
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!viewer.hidden)closeLKPD();});
 })();
 </script></body></html>
