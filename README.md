@@ -22,3 +22,7 @@ Static website ready for GitHub + Cloudflare Pages.
 - `style.css` responsive styling
 - `script.js` navigation, missions, demo tutoring, local check-in
 - `assets/docs/EModul.pdf`, `ELKPD1.pdf`, `ELKPD2.pdf`
+
+
+## E-LKPD interaktif (pembaruan)
+E-LKPD 1 dan 2 sekarang berupa HTML mandiri di assets/docs/E-LKPD1.html dan E-LKPD2.html, menggantikan tautan PDF lama. Tombol di Perpustakaan membuka HTML tersebut. Simpan otomatis memakai localStorage pada browser/perangkat yang sama; gunakan Ekspor jawaban JSON sebagai cadangan. Belum ada sinkronisasi akun/guru atau pengumpulan tugas ke server. Dokumen E-Modul PDF tetap dipertahankan.
